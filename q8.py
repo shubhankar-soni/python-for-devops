@@ -38,7 +38,7 @@ with open("sample1.txt", "r") as file:
        if fruit != "":
             if fruit in fruit_count:
                 fruit_count[fruit] = fruit_count[fruit] + 1
-                print(fruit_count[fruit])
+                
             else:
                 fruit_count[fruit] = 1
 

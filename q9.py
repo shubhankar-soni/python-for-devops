@@ -1,17 +1,32 @@
-file = open("sample2.txt", "r")
+cities_dict = {}
+file = open("sample2.txt","r")
 
-cities = {}
+for cities in file:
+    city = cities.strip()
+    if city in cities_dict:
+        cities_dict[city] += 1
+    else:
+        cities_dict[city] = 1
+
+print(cities_dict)
+
 max_number = 0
-min_number = 0
+max_city = ""
+min_number = None
+min_city = ""
 
-for line in file:
-    city = line.strip()
-    if city != "":
-        if city in cities:
-            cities[city] += 1
-        else:
-            cities[city] = 1
+for i,j in cities_dict.items():
+    if j > max_number:
+        max_number = j
+        max_city = i
+    
+    if min_number is None or cities_dict[i] < min_number:
+        min_number = cities_dict[i]
+        min_city = i
+        
+print("Word with maximum occurance: ", max_city)
 
-max_number = max(cities, key=cities.get)
-min_number = min(cities, key=cities.get)
-print(max_number)
+print("Word with minimum occurance: ")
+for i in cities_dict:
+    if cities_dict[i] == min_number:
+        print(i)

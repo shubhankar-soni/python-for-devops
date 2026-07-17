@@ -1,0 +1,7 @@
+04:15:00 192.168.1.5 GET /api/v1/users 200
+04:16:12 10.0.0.42 POST /api/v1/login 500
+04:17:05 10.0.0.42 GET /api/v1/dashboard 503
+04:18:22 192.168.1.5 GET /api/v1/users 200
+04:19:00 10.0.0.42 POST /api/v1/login 500
+04:19:30 10.0.0.42 GET /api/v1/assets 500
+04:22:15 10.0.0.42 GET /api/v1/retry 500
