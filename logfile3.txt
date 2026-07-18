@@ -1,0 +1,5 @@
+11:45:00 auth-service UNHEALTHY
+11:47:30 payment-service UNHEALTHY
+11:50:00 auth-service HEALTHY
+11:55:12 cart-service UNHEALTHY
+12:05:00 payment-service HEALTHY
